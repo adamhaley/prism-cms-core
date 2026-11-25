@@ -1,0 +1,49 @@
+{
+    "name": "adamhaley/prism-cms-core",
+    "description": "Prism CMS core: a page tree, catch-all page routing and a Filament page editor for Laravel sites.",
+    "keywords": ["laravel", "filament", "cms", "prism-cms"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adam Haley"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "filament/filament": "^5.0",
+        "laravel/framework": "^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrismCms\\": "src/",
+            "PrismCms\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrismCms\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PrismCms\\PrismCmsServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "pint"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
